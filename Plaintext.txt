@@ -1,0 +1,38 @@
+Plaintext
+musical-rental-app/
+├── backend/                          # Spring Boot 3.3 + Java 21 + H2
+│   ├── pom.xml
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/rental/music/
+│       │   │   ├── MusicRentalApplication.java
+│       │   │   ├── config/AppConfig.java
+│       │   │   ├── model/
+│       │   │   │   ├── Equipment.java
+│       │   │   │   └── Booking.java
+│       │   │   ├── dto/
+│       │   │   │   ├── BookingRequest.java
+│       │   │   │   └── LocationInfoDTO.java
+│       │   │   ├── repository/
+│       │   │   │   ├── EquipmentRepository.java
+│       │   │   │   └── BookingRepository.java
+│       │   │   ├── service/
+│       │   │   │   ├── EquipmentService.java
+│       │   │   │   ├── BookingService.java
+│       │   │   │   └── LocationLookupService.java
+│       │   │   ├── controller/
+│       │   │   │   ├── EquipmentController.java
+│       │   │   │   └── BookingController.java
+│       │   │   └── exception/
+│       │   │       ├── BusinessRuleException.java
+│       │   │       ├── ResourceNotFoundException.java
+│       │   │       └── GlobalExceptionHandler.java
+│       │   └── resources/application.yml
+│       └── test/java/com/rental/music/service/
+│           ├── BookingServiceTest.java
+│           └── EquipmentServiceTest.java
+└── frontend/                         # Angular 18+ Standalone + RxJS
+    └── src/app/
+        ├── models/rental.models.ts
+        ├── services/rental-state.service.ts
+        └── app.component.ts
